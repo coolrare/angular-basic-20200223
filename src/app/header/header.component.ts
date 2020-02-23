@@ -21,7 +21,5 @@ export class HeaderComponent implements OnInit {
     this.fontSize += 2;
     this.isHighlight = !this.isHighlight;
     console.log(this.keyword);
-    this.click.emit(this.keyword);
-
   }
 }
