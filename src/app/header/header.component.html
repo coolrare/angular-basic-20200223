@@ -13,13 +13,24 @@
     </button>
 
     <span class="highlight">
+      <ng-container *ngIf="keyword === ''; then pleaseInput; else yourInput">
+      </ng-container>
+      <ng-template #pleaseInput>
+        請輸入關鍵字
+      </ng-template>
+      <ng-template #yourInput>
+        你輸入: {{ keyword }}
+      </ng-template>
+    </span>
+
+    <!-- <span class="highlight">
       <ng-container *ngIf="keyword === ''; else yourInput2">
         請輸入關鍵字
       </ng-container>
       <ng-template #yourInput2>
         你輸入: {{ keyword }}
       </ng-template>
-    </span>
+    </span> -->
 
     <!-- <span class="highlight" *ngIf="keyword === ''; else yourInput">
       請輸入關鍵字
