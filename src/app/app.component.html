@@ -1,11 +1,11 @@
-<app-header></app-header>
+<app-header (whenSearch)="filterArticles($event)"></app-header>
 
 <div class="home-page">
 
   <div class="banner">
     <div class="container">
-    <h1 class="logo-font">{{ title }}</h1>
-      <p [innerHTML]="subtitle" ></p>
+      <h1 class="logo-font">{{ title }}</h1>
+      <p [innerHTML]="subtitle"></p>
     </div>
   </div>
 

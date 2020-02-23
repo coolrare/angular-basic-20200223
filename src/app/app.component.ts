@@ -72,8 +72,7 @@ export class AppComponent {
 
   articles2 = [
     {
-      title:
-        'Test',
+      title: 'Test',
       slug: 'test',
       body:
         // tslint:disable-next-line: max-line-length
@@ -131,4 +130,11 @@ export class AppComponent {
       favoritesCount: 5
     }
   ];
+
+  filterArticles(keyword: string) {
+    console.log(keyword);
+    this.articles = this.articles.filter(
+      item => item.title.indexOf(keyword) !== -1
+    );
+  }
 }
